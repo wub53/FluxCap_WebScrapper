@@ -57,7 +57,7 @@ class VideoScraper(Spider):
         download = await download_info.value
 
         # Save the downloaded file to a specific location
-        file_path = "/Users/omkarpatil/scrappy_repo/Web_Scrapper/basic_scrapy_spider/Downloads/downloaded_video.mp4"
+        file_path = "/home/ubuntu/FluxCap_WebScrapper/basic_scrapy_spider/Downloads/downloaded_video.mp4"
         await download.save_as(file_path)
 
         self.logger.info(f"-----------------------Video downloaded and saved to: {file_path}-----------------------")

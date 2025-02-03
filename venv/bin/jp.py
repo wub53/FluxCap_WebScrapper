@@ -1,4 +1,4 @@
-#!/Users/omkarpatil/scrappy_crawler/basic-scrapy-project/venv/bin/python3
+#!/home/ubuntu/FluxCap_WebScrapper/venv/bin/python3
 
 import sys
 import json
