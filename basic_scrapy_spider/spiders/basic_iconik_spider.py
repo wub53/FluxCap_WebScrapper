@@ -15,9 +15,14 @@ class VideoScraper(Spider):
     name = "video_scraper"
     #start_url = "https://icnk.io/u/Aokozj3WZKHg/"
 
+    def __init__(self, start_url=None, *args, **kwargs):
+        super(VideoScraper, self).__init__(*args, **kwargs)
+        self.start_url = start_url  # Accept the URL as an argument
+
     def start_requests(self):
         yield scrapy.Request(
-                url = "https://icnk.io/u/CtYlCj0yk6Fd/",
+                #url = "https://icnk.io/u/CtYlCj0yk6Fd/",
+                url = self.start_url,
                 meta= dict (
                     playwright = True,
                     playwright_include_page = True,
